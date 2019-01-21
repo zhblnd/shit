@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--<mapping class="database.models.GoodType" />-->
+        <property name = "hibernate.dialect">
+            org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="connection.url">jdbc:postgresql://127.0.0.1:5432/trade_org</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.pool_size">1</property>
+        <!--<property name="hibernate.connection.username">zhblnd</property>-->
+        <!--<property name="hibernate.connection.password">02oct720A</property>-->
+        <!-- mappings for annotated classes -->
+        <mapping class="database.models.GoodType"/>
+        <mapping class="database.models.Customer"/>
+        <mapping class="database.models.ExpenditureInvoice"/>
+        <mapping class="database.models.ExpenditureInvoice_Good"/>
+        <mapping class="database.models.Good"/>
+        <mapping class="database.models.Receipt"/>
+        <mapping class="database.models.Receipt_Good"/>
+        <mapping class="database.models.Sale_Good"/>
+        <mapping class="database.models.Sale"/>
+        <mapping class="database.models.Seller"/>
+        <mapping class="database.models.ShopDepartment"/>
+        <mapping class="database.models.WriteOffAct"/>
+        <mapping class="database.models.WriteOffAct_Good"/>
+    </session-factory>
+</hibernate-configuration>
